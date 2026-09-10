@@ -1,0 +1,536 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Dashboard - Student Task Planner
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+</head>
+
+<body>
+
+    <!-- ==========================================
+         NAVBAR
+    =========================================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Student Task Planner
+        </div>
+
+        <div class="nav-right">
+
+            <span id="welcomeUser">
+                Welcome
+            </span>
+
+            <button
+                id="logoutBtn"
+                class="logout-btn"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ==========================================
+         MAIN DASHBOARD
+    =========================================== -->
+
+    <main class="dashboard-container">
+
+
+        <!-- ======================================
+             DASHBOARD HEADER
+        ======================================= -->
+
+        <div class="dashboard-header">
+
+            <div>
+
+                <h1>
+                    My Dashboard
+                </h1>
+
+                <p>
+                    Manage and track your daily tasks.
+                </p>
+
+            </div>
+
+            <button
+                id="addTaskBtn"
+                class="add-task-btn"
+            >
+                + Add Task
+            </button>
+
+        </div>
+
+
+        <!-- ======================================
+             SUMMARY CARDS
+        ======================================= -->
+
+        <section class="summary-grid">
+
+
+            <!-- Total Tasks -->
+
+            <div class="summary-card">
+
+                <h3>
+                    Total Tasks
+                </h3>
+
+                <p id="totalTasks">
+                    0
+                </p>
+
+            </div>
+
+
+            <!-- Pending -->
+
+            <div class="summary-card">
+
+                <h3>
+                    Pending
+                </h3>
+
+                <p id="pendingTasks">
+                    0
+                </p>
+
+            </div>
+
+
+            <!-- In Progress -->
+
+            <div class="summary-card">
+
+                <h3>
+                    In Progress
+                </h3>
+
+                <p id="inProgressTasks">
+                    0
+                </p>
+
+            </div>
+
+
+            <!-- Completed -->
+
+            <div class="summary-card">
+
+                <h3>
+                    Completed
+                </h3>
+
+                <p id="completedTasks">
+                    0
+                </p>
+
+            </div>
+
+
+            <!-- Overdue -->
+
+            <div class="summary-card">
+
+                <h3>
+                    Overdue
+                </h3>
+
+                <p id="overdueTasks">
+                    0
+                </p>
+
+            </div>
+
+
+            <!-- Completion -->
+
+            <div class="summary-card">
+
+                <h3>
+                    Completion
+                </h3>
+
+                <p id="completionPercentage">
+                    0%
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             TASK PROGRESS
+        ======================================= -->
+
+        <section class="progress-section">
+
+            <div class="progress-header">
+
+                <div>
+
+                    <h2>
+                        Task Progress
+                    </h2>
+
+                    <p>
+                        Track your overall task completion.
+                    </p>
+
+                </div>
+
+                <strong id="progressText">
+                    0%
+                </strong>
+
+            </div>
+
+
+            <div class="progress-bar-container">
+
+                <div
+                    id="progressBar"
+                    class="progress-bar"
+                    style="width: 0%;"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             UPCOMING TASKS
+        ======================================= -->
+
+        <section class="upcoming-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>
+                        Upcoming Tasks
+                    </h2>
+
+                    <p>
+                        Tasks that are not completed yet.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="upcomingTasks"
+                class="upcoming-list"
+            >
+
+                <p class="no-tasks">
+                    Loading upcoming tasks...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             TASK FILTER SECTION
+        ======================================= -->
+
+        <section class="filter-section">
+
+            <h2>
+                My Tasks
+            </h2>
+
+
+            <div class="filters">
+
+
+                <!-- Status Filter -->
+
+                <select id="statusFilter">
+
+                    <option value="">
+                        All Status
+                    </option>
+
+                    <option value="Pending">
+                        Pending
+                    </option>
+
+                    <option value="In Progress">
+                        In Progress
+                    </option>
+
+                    <option value="Completed">
+                        Completed
+                    </option>
+
+                </select>
+
+
+                <!-- Priority Filter -->
+
+                <select id="priorityFilter">
+
+                    <option value="">
+                        All Priority
+                    </option>
+
+                    <option value="Low">
+                        Low
+                    </option>
+
+                    <option value="Medium">
+                        Medium
+                    </option>
+
+                    <option value="High">
+                        High
+                    </option>
+
+                </select>
+
+
+                <!-- Clear Filters -->
+
+                <button id="clearFilters">
+                    Clear Filters
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             TASK LIST
+        ======================================= -->
+
+        <section
+            id="taskList"
+            class="task-list"
+        >
+
+            <p class="no-tasks">
+                Loading tasks...
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ==========================================
+         ADD / EDIT TASK MODAL
+    =========================================== -->
+
+    <div
+        id="taskModal"
+        class="modal"
+    >
+
+        <div class="modal-content">
+
+
+            <!-- Modal Header -->
+
+            <div class="modal-header">
+
+                <h2 id="modalTitle">
+                    Add New Task
+                </h2>
+
+                <button
+                    id="closeModal"
+                    class="close-btn"
+                >
+                    &times;
+                </button>
+
+            </div>
+
+
+            <!-- Task Form -->
+
+            <form id="taskForm">
+
+
+                <!-- Hidden Task ID -->
+
+                <input
+                    type="hidden"
+                    id="taskId"
+                >
+
+
+                <!-- Task Title -->
+
+                <div class="form-group">
+
+                    <label for="taskTitle">
+                        Task Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="taskTitle"
+                        placeholder="Enter task title"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Description -->
+
+                <div class="form-group">
+
+                    <label for="taskDescription">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="taskDescription"
+                        placeholder="Enter task description"
+                    ></textarea>
+
+                </div>
+
+
+                <!-- Priority + Status -->
+
+                <div class="form-row">
+
+
+                    <!-- Priority -->
+
+                    <div class="form-group">
+
+                        <label for="taskPriority">
+                            Priority
+                        </label>
+
+                        <select id="taskPriority">
+
+                            <option value="Low">
+                                Low
+                            </option>
+
+                            <option
+                                value="Medium"
+                                selected
+                            >
+                                Medium
+                            </option>
+
+                            <option value="High">
+                                High
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Status -->
+
+                    <div class="form-group">
+
+                        <label for="taskStatus">
+                            Status
+                        </label>
+
+                        <select id="taskStatus">
+
+                            <option value="Pending">
+                                Pending
+                            </option>
+
+                            <option value="In Progress">
+                                In Progress
+                            </option>
+
+                            <option value="Completed">
+                                Completed
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Due Date -->
+
+                <div class="form-group">
+
+                    <label for="taskDueDate">
+                        Due Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="taskDueDate"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Save Button -->
+
+                <button
+                    type="submit"
+                    class="btn"
+                >
+                    Save Task
+                </button>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
