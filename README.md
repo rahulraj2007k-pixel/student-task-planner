@@ -96,3 +96,23 @@ student-task-planner/
 │
 ├── .gitignore
 └── README.md
+## ?? Project Screenshots
+
+### 1. Registration Page
+![Registration Page](screenshots/Register.png)
+
+### 2. Login Page
+![Login Page](screenshots/login.png)
+
+### 3. Dashboard
+![Dashboard](screenshots/Dashboard.png)
+
+### 4. Add Task
+![Add Task](screenshots/Add%20task.png)
+
+### 5. My Tasks
+![My Tasks](screenshots/My%20task.png)
+
+### 6. Upcoming Tasks
+![Upcoming Tasks](screenshots/Upcoming%20task.png)
+
