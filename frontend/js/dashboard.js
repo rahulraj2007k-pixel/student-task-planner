@@ -1,4 +1,4 @@
- const API_URL = "http://localhost:5000/api";
+ const API_URL = "https://student-task-planner-8foj.onrender.com/api";
 
 const token = localStorage.getItem("token");
 const user = JSON.parse(localStorage.getItem("user") || "null");
