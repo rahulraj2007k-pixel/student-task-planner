@@ -1,8 +1,8 @@
-# Student Task Planner
+﻿# Student Task Planner
 
 A full-stack web application designed to help students create, manage, track, and organize their academic tasks efficiently.
 
-## 🚀 Features
+## ðŸš€ Features
 
 - User Registration and Login
 - Secure password hashing using bcryptjs
@@ -31,7 +31,7 @@ A full-stack web application designed to help students create, manage, track, an
 - MongoDB database persistence
 - Responsive dashboard design
 
-## 🛠️ Technologies Used
+## ðŸ› ï¸ Technologies Used
 
 ### Frontend
 
@@ -52,51 +52,51 @@ A full-stack web application designed to help students create, manage, track, an
 - CORS
 - dotenv
 
-## 📁 Project Structure
+## ðŸ“ Project Structure
 
 ```text
 student-task-planner/
-│
-├── backend/
-│   ├── config/
-│   │   └── db.js
-│   │
-│   ├── controllers/
-│   │   ├── authController.js
-│   │   ├── dashboardController.js
-│   │   └── taskController.js
-│   │
-│   ├── middleware/
-│   │   └── authMiddleware.js
-│   │
-│   ├── models/
-│   │   ├── User.js
-│   │   └── Task.js
-│   │
-│   ├── routes/
-│   │   ├── authRoutes.js
-│   │   ├── dashboardRoutes.js
-│   │   └── taskRoutes.js
-│   │
-│   ├── .env
-│   ├── package.json
-│   └── server.js
-│
-├── frontend/
-│   ├── css/
-│   │   └── style.css
-│   │
-│   ├── js/
-│   │   ├── auth.js
-│   │   └── dashboard.js
-│   │
-│   ├── index.html
-│   ├── login.html
-│   └── register.html
-│
-├── .gitignore
-└── README.md
-## ?? Project Screenshots
+â”‚
+â”œâ”€â”€ backend/
+â”‚   â”œâ”€â”€ config/
+â”‚   â”‚   â””â”€â”€ db.js
+â”‚   â”‚
+â”‚   â”œâ”€â”€ controllers/
+â”‚   â”‚   â”œâ”€â”€ authController.js
+â”‚   â”‚   â”œâ”€â”€ dashboardController.js
+â”‚   â”‚   â””â”€â”€ taskController.js
+â”‚   â”‚
+â”‚   â”œâ”€â”€ middleware/
+â”‚   â”‚   â””â”€â”€ authMiddleware.js
+â”‚   â”‚
+â”‚   â”œâ”€â”€ models/
+â”‚   â”‚   â”œâ”€â”€ User.js
+â”‚   â”‚   â””â”€â”€ Task.js
+â”‚   â”‚
+â”‚   â”œâ”€â”€ routes/
+â”‚   â”‚   â”œâ”€â”€ authRoutes.js
+â”‚   â”‚   â”œâ”€â”€ dashboardRoutes.js
+â”‚   â”‚   â””â”€â”€ taskRoutes.js
+â”‚   â”‚
+â”‚   â”œâ”€â”€ .env
+â”‚   â”œâ”€â”€ package.json
+â”‚   â””â”€â”€ server.js
+â”‚
+â”œâ”€â”€ frontend/
+â”‚   â”œâ”€â”€ css/
+â”‚   â”‚   â””â”€â”€ style.css
+â”‚   â”‚
+â”‚   â”œâ”€â”€ js/
+â”‚   â”‚   â”œâ”€â”€ auth.js
+â”‚   â”‚   â””â”€â”€ dashboard.js
+â”‚   â”‚
+â”‚   â”œâ”€â”€ index.html
+â”‚   â”œâ”€â”€ login.html
+â”‚   â””â”€â”€ register.html
+â”‚
+â”œâ”€â”€ .gitignore
+â””â”€â”€ README.md
+## Project Screenshots
 
 ### 1. Registration Page
 ![Registration Page](screenshots/Register.png)
@@ -116,24 +116,4 @@ student-task-planner/
 ### 6. Upcoming Tasks
 ![Upcoming Tasks](screenshots/Upcoming%20task.png)
 
-
-## ?? Project Screenshots
-
-### 1. Registration Page
-![Registration Page](screenshots/Register.png)
-
-### 2. Login Page
-![Login Page](screenshots/login.png)
-
-### 3. Dashboard
-![Dashboard](screenshots/Dashboard.png)
-
-### 4. Add Task
-![Add Task](screenshots/Add%20task.png)
-
-### 5. My Tasks
-![My Tasks](screenshots/My%20task.png)
-
-### 6. Upcoming Tasks
-![Upcoming Tasks](screenshots/Upcoming%20task.png)
 
