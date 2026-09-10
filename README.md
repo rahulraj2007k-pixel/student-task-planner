@@ -1,8 +1,8 @@
-﻿# Student Task Planner
+﻿ # Student Task Planner
 
 A full-stack web application designed to help students create, manage, track, and organize their academic tasks efficiently.
 
-## ðŸš€ Features
+## Features
 
 - User Registration and Login
 - Secure password hashing using bcryptjs
@@ -31,7 +31,7 @@ A full-stack web application designed to help students create, manage, track, an
 - MongoDB database persistence
 - Responsive dashboard design
 
-## ðŸ› ï¸ Technologies Used
+## Technologies Used
 
 ### Frontend
 
@@ -52,69 +52,124 @@ A full-stack web application designed to help students create, manage, track, an
 - CORS
 - dotenv
 
-## ðŸ“ Project Structure
+## Project Structure
 
 ```text
 student-task-planner/
-â”‚
-â”œâ”€â”€ backend/
-â”‚   â”œâ”€â”€ config/
-â”‚   â”‚   â””â”€â”€ db.js
-â”‚   â”‚
-â”‚   â”œâ”€â”€ controllers/
-â”‚   â”‚   â”œâ”€â”€ authController.js
-â”‚   â”‚   â”œâ”€â”€ dashboardController.js
-â”‚   â”‚   â””â”€â”€ taskController.js
-â”‚   â”‚
-â”‚   â”œâ”€â”€ middleware/
-â”‚   â”‚   â””â”€â”€ authMiddleware.js
-â”‚   â”‚
-â”‚   â”œâ”€â”€ models/
-â”‚   â”‚   â”œâ”€â”€ User.js
-â”‚   â”‚   â””â”€â”€ Task.js
-â”‚   â”‚
-â”‚   â”œâ”€â”€ routes/
-â”‚   â”‚   â”œâ”€â”€ authRoutes.js
-â”‚   â”‚   â”œâ”€â”€ dashboardRoutes.js
-â”‚   â”‚   â””â”€â”€ taskRoutes.js
-â”‚   â”‚
-â”‚   â”œâ”€â”€ .env
-â”‚   â”œâ”€â”€ package.json
-â”‚   â””â”€â”€ server.js
-â”‚
-â”œâ”€â”€ frontend/
-â”‚   â”œâ”€â”€ css/
-â”‚   â”‚   â””â”€â”€ style.css
-â”‚   â”‚
-â”‚   â”œâ”€â”€ js/
-â”‚   â”‚   â”œâ”€â”€ auth.js
-â”‚   â”‚   â””â”€â”€ dashboard.js
-â”‚   â”‚
-â”‚   â”œâ”€â”€ index.html
-â”‚   â”œâ”€â”€ login.html
-â”‚   â””â”€â”€ register.html
-â”‚
-â”œâ”€â”€ .gitignore
-â””â”€â”€ README.md
+│
+├── backend/
+│   ├── config/
+│   │   └── db.js
+│   │
+│   ├── controllers/
+│   │   ├── authController.js
+│   │   ├── dashboardController.js
+│   │   └── taskController.js
+│   │
+│   ├── middleware/
+│   │   └── authMiddleware.js
+│   │
+│   ├── models/
+│   │   ├── User.js
+│   │   └── Task.js
+│   │
+│   ├── routes/
+│   │   ├── authRoutes.js
+│   │   ├── dashboardRoutes.js
+│   │   └── taskRoutes.js
+│   │
+│   ├── package.json
+│   └── server.js
+│
+├── frontend/
+│   ├── css/
+│   │   └── style.css
+│   │
+│   ├── js/
+│   │   ├── auth.js
+│   │   └── dashboard.js
+│   │
+│   ├── index.html
+│   ├── login.html
+│   └── register.html
+│
+├── screenshots/
+│   ├── add-task.png
+│   ├── Dashboard.png
+│   ├── login.png
+│   ├── my-task.png
+│   ├── Register.png
+│   └── upcoming-task.png
+│
+├── .gitignore
+└── README.md
+```
+
 ## Project Screenshots
 
 ### 1. Registration Page
+
 ![Registration Page](screenshots/Register.png)
 
 ### 2. Login Page
+
 ![Login Page](screenshots/login.png)
 
 ### 3. Dashboard
+
 ![Dashboard](screenshots/Dashboard.png)
 
 ### 4. Add Task
+
 ![Add Task](screenshots/add-task.png)
 
 ### 5. My Tasks
+
 ![My Tasks](screenshots/my-task.png)
 
 ### 6. Upcoming Tasks
+
 ![Upcoming Tasks](screenshots/upcoming-task.png)
 
+## Live Demo
 
+[Student Task Planner - Live Demo](https://student-task-planner-1.onrender.com)
 
+## GitHub Repository
+
+[Student Task Planner - GitHub Repository](https://github.com/rahulraj2007k-pixel/student-task-planner)
+
+## Authentication
+
+The application uses JWT-based authentication.
+
+Passwords are securely hashed using bcryptjs before being stored in the database.
+
+Users can only access and manage their own tasks.
+
+## Database
+
+MongoDB is used for persistent storage.
+
+Mongoose is used to define schemas and interact with MongoDB.
+
+## Deployment
+
+- Frontend: Render Static Site
+- Backend: Render Web Service
+- Database: MongoDB Atlas
+
+## Future Improvements
+
+- Task reminder notifications
+- Email reminders
+- Calendar integration
+- Dark mode
+- Advanced task analytics
+- Mobile application
+
+## Author
+
+Rahul Kumar
+
+BCA Student
