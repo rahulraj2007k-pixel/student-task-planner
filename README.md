@@ -108,12 +108,13 @@ student-task-planner/
 ![Dashboard](screenshots/Dashboard.png)
 
 ### 4. Add Task
-![Add Task](screenshots/Add%20task.png)
+![Add Task](screenshots/add-task.png)
 
 ### 5. My Tasks
-![My Tasks](screenshots/My%20task.png)
+![My Tasks](screenshots/my-task.png)
 
 ### 6. Upcoming Tasks
-![Upcoming Tasks](screenshots/Upcoming%20task.png)
+![Upcoming Tasks](screenshots/upcoming-task.png)
+
 
 
